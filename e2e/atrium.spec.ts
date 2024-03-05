@@ -21,10 +21,14 @@ test('login to Atrium', async ({ page }) => {
   await page.goto('http://atroul02.griffiths-waite.co.uk:50004/');
 
   // Fill the username field 
-  await page.getByRole("textbox", {name: "Username"});
+  await page.fill('Username', 'SEDKE21'){
+    
+  };
+  
+  // await page.getByRole("textbox", {name: "Username"});
 
   // Fill the password field 
-  await page.getByRole("textbox", {name: "Paassword"});
+  await page.getByRole("textbox", {name: "Password"});
 
   // Expects page to have a button with Show.
   await page.getByRole('link', { name: 'login' });
